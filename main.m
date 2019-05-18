@@ -1,6 +1,6 @@
-clc
-clear
-clear functions
+clc;
+clear;
+clear functions;
 %
 % -----------------------------------------------------------
 % 	Introducao ao Calculo Numerico usando o Octave/Matlab		              
@@ -8,40 +8,40 @@ clear functions
 %------------------------------------------------------------
 % Descricao do Trabalho 
 % -----------------------------------------------------------
-introd
+introd;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Sistemas Lineares - 1
 % -----------------------------------------------------------
-sl1
+sl1;
 disp(' ');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Sistemas Lineares - 2
 % -----------------------------------------------------------
-sl2
+sl2;
 disp(' ');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Ajuste de Curvas - 1
 % -----------------------------------------------------------
-ac1
+ac1;
 disp(' ');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
 % -----------------------------------------------------------
 % Ajuste de Curvas - 2
 % -----------------------------------------------------------
-ac2
+ac2;
 disp(' ');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Final da Apresentacao
 % -----------------------------------------------------------
 disp(' ');
-disp('Tecle alguma coisa para terminar a apresentacao...'); pause
-clc
+input('Tecle alguma coisa para terminar a apresentacao...');
+clc;
