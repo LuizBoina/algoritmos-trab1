@@ -2,11 +2,11 @@ clc;
 clear;
 
 %%%%%%%%%%%%%% LETRA A %%%%%%%%%%%%%% 
-disp('Lista de sistemas lineares: Exercicio 1 letra (a)');
-disp('Para esse exercicio iremos carregar 3 matrizes diferentes e analizar a esparsidade de cada uma e suas respectivas decomposicoes');
+disp("Lista de sistemas lineares: Exercicio 1 letra (a)");
+disp("Para esse exercicio iremos carregar 3 matrizes diferentes e analizar a esparsidade de cada uma e suas respectivas decomposicoes");
+input ("Pressione enter para plotar as matrizes dos coeficientes A");
 
 %%%%%%%%%%%%%% MATRIZ DOS COEFICIENTES %%%%%%%%%%%%%%
-input ("Pressione enter para plotar as matrizes dos coeficientes A");
 clc;
 load ("./matrizes/plat362.mat");
 A = Problem.A;
@@ -20,10 +20,10 @@ figure(2);
 spy(B);
 figure(3);
 spy(C);
-disp('Como podemos perceber todas as tres matrizes dos coeficientes tem disposicoes diferentes.');
+disp("Como podemos perceber todas as tres matrizes dos coeficientes tem disposicoes diferentes.");
+input("Pressione enter para plotar as matriz de decomposicao inferior L.");
 
 %%%%%%%%%%%%%%  MATRIZ L %%%%%%%%%%%%%%
-input("Pressione enter para plotar as matriz de decomposicao inferior L.");
 clf;
 [LA, UA, PA] = lu(A);
 [LB, UB, PB] = lu(B);
@@ -34,10 +34,10 @@ figure(2);
 spy(LB);
 figure(3);
 spy(LC);
-disp('Como podemos perceber todas as tres matrizes sao triangulares inferiores.');
+disp("Como podemos perceber todas as tres matrizes sao triangulares inferiores.");
+input("Pressione enter para plotar as matriz de decomposicao superior U.");
 
 %%%%%%%%%%%%%% MATRIZ U %%%%%%%%%%%%%%
-input("Pressione enter para plotar as matriz de decomposicao superior U.");
 clf;
 figure(1);
 spy(UA);
@@ -45,84 +45,114 @@ figure(2);
 spy(UB);
 figure(3);
 spy(UC);
-disp('Como podemos perceber todas as tres matrizes sao triangulares superiores.');
+disp("Como podemos perceber todas as tres matrizes sao triangulares superiores.");
 
 %%%%%%%%%%%%%% CONCLUSAO LETRA A %%%%%%%%%%%%%%
-disp('Pode-se concluir que independente da disposicao dos valores das matrizes dos coeficientes as matrizes L e U tem o mesmo formato.');
-input("Pressione enter para finalizar a letra (a) do exercicio 1");
+disp("Pode-se concluir que independente da disposicao dos valores das matrizes dos coeficientes as matrizes L e U tem o mesmo formato.");
+input("Pressione enter para finalizar a letra (a) do exercicio 1.");
 close all;
 clc;
 clear;
 
 %%%%%%%%%%%%%% LETRA B %%%%%%%%%%%%%%
-disp('Lista de sistemas lineares: Exercicio 1 letra (b)');
-disp('Para esse exercicio iremos utilizar as mesmas matrizes, calcular a solucao para b igual um vetor de 1 e calcular a norma maxima');
+disp("Lista de sistemas lineares: Exercicio 1 letra (b).");
+disp("Para esse exercicio iremos utilizar as mesmas matrizes para calcular a solucao de b igual a vetor de 1 vezes a matriz dos coeficientes e calcular a norma maxima.");
 
 %%%%%%%%%%%%%% PRIMEIRA MATRIZ %%%%%%%%%%%%%%
 load ("./matrizes/plat362.mat");
 A = Problem.A;
 n = rows(A);
 b = A*ones(n,1);
-input('Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1');
+input("Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1.");
 clc;
 disp("b=");
 disp(b);
-input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1");
+input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1.");
 clc;
 disp("x=");
 x = A\b;
 disp(x);
-input("Aperte enter para obter a norma do maximo relativa do residuo");
+input("Aperte enter para obter a norma do maximo relativa do residuo.");
 norma = norm((b-(A*x))/b, inf);
 disp(["norma igual a ", num2str(norma)]);
+input("Aperte enter para prosseguir para a proxima matriz.");
 
 %%%%%%%%%%%%%% SEGUNDA MATRIZ %%%%%%%%%%%%%%
-input("Aperte enter para prosseguir para a proxima matriz");
 clear;
 load ("./matrizes/rail_5177.mat");
 A = Problem.A;
 n = rows(A);
 b = A*ones(n,1);
-input('Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1');
+input("Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1.");
 clc;
 disp("b=");
 disp(b);
-input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1");
+input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1.");
 clc;
 disp("x=");
 x = A\b;
 disp(x);
-input("Aperte enter para obter a norma do maximo relativa do residuo");
+input("Aperte enter para obter a norma do maximo relativa do residuo.");
 norma = norm((b-(A*x))/b, inf);
 disp(["norma igual a ", num2str(norma)]);
+input("Aperte enter para prosseguir para a proxima matriz.");
 
 %%%%%%%%%%%%%% TERCEIRA MATRIZ %%%%%%%%%%%%%%
-input("Aperte enter para prosseguir para a proxima matriz");
 clear;
 load ("./matrizes/orsirr_1.mat");
 A = Problem.A;
 n = rows(A);
 b = A*ones(n,1);
-input('Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1');
+input("Aperte enter para obter o vetor resultante da multiplicacao da matriz dos coeficientes pelo vetor de 1.");
 clc;
 disp("b=");
 disp(b);
-input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1");
+input("Aperte enter para obter o vetor solucao da matriz dos coeficientes por b obtendo novamente o vetor de 1.");
 clc;
 disp("x=");
 x = A\b;
 disp(x);
-input("Aperte enter para obter a norma do maximo relativa do residuo");
+input("Aperte enter para obter a norma do maximo relativa do residuo.");
 norma = norm((b-(A*x))/b, inf);
 disp(["norma igual a ", num2str(norma)]);
 
 %%%%%%%%%%%%%% CONCLUSAO LETRA B %%%%%%%%%%%%%%
-disp("uma conclusao bacana ;)");
-input("Pressione enter para finalizar a letra (b) do exercicio 1");
+disp("O valor da norma obtido para cada uma das tres matrizes eh conveniente uma vez que é muito pequeno o que bate com a intuicao visto que x é a solucao para Ax = b. Desse modo a diferenca obtida eh devido a erro de ponto flutuante.");
+input("Pressione enter para finalizar a letra (b) do exercicio 1.");
 close all;
 clc;
 clear;
 
 %%%%%%%%%%%%%% LETRA C %%%%%%%%%%%%%%
-disp('Lista de sistemas lineares: Exercicio 1 letra (c)');
-disp('Para esse exercicio iremos utilizar as mesmas matrizes, calcular a solucao para b igual um vetor de 1 e calcular a norma maxima');
+disp("Lista de sistemas lineares: Exercicio 1 letra (c).");
+disp("Para esse exercicio iremos utilizar as mesmas matrizes para calcular o condicionamento e comentar sobre os valores obtidos.");
+input("Aperte enter para obter o condicionamento da primeira matriz.");
+
+%%%%%%%%%%%%%% PRIMEIRA MATRIZ %%%%%%%%%%%%%%
+load ("./matrizes/plat362.mat");
+A = Problem.A;
+condi = cond(A);
+disp(["cond = ", num2str(condi)]);
+input("Aperte enter para prosseguir para a proxima matriz.");
+
+%%%%%%%%%%%%%% SEGUNDA MATRIZ %%%%%%%%%%%%%%
+clear;
+load ("./matrizes/rail_5177.mat");
+A = Problem.A;
+condi = cond(A);
+disp(["cond = ", num2str(condi)]);
+input("Aperte enter para prosseguir para a proxima matriz.");
+
+%%%%%%%%%%%%%% TERCEIRA MATRIZ %%%%%%%%%%%%%%
+clear;
+load ("./matrizes/orsirr_1.mat");
+A = Problem.A;
+condi = cond(A);
+disp(["cond = ", num2str(condi)]);
+
+%%%%%%%%%%%%%% CONCLUSAO LETRA B %%%%%%%%%%%%%%
+disp("Pode-se observar que o valor de condicionamento para primeira e terceira matriz foram obtidos rapidamente enquanto que para segunda matriz o resultado demorou mais. Em relacao ao valor a primeira matriz tem um valor bem mais do que a segunda e a terceira matriz. Essa diferenca indica que a segunda matriz esta melhor condicionada do que a terceira e a primeira matriz esta claramente mal condionada.");
+input("Aperte enter para encerrar a questao 1 da lista de sistemas lineares.");
+clc;
+clear;
+
