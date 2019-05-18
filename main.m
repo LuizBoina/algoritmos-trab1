@@ -10,7 +10,7 @@ clear functions
 % -----------------------------------------------------------
 introd
 disp(' ');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Sistemas Lineares - 1
