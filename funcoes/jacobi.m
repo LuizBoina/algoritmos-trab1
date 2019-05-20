@@ -27,7 +27,7 @@ function [x,iter,res] = jacobi(A,b,tol,nmaxiter)
 	        x(i) = (b(i) - soma)/A(i,i);
         endfor          
 	      iter = iter + 1;
-        res(iter) = norm((b-A*x)/b,inf);  
+        res(iter) = norm((b-A*x)/b,inf);
         err = res(iter);       
         x0 = x;	   
      endwhile;
