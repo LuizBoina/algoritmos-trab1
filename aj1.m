@@ -2,8 +2,8 @@ addpath ('./funcoes')
 clc;
 clear;
 
-%%%%%%%%%%%%%% LETRA A %%%%%%%%%%%%%% 
-disp("Lista de ajuste de curvas: Exercicio 1 letra");
+%%%%%%%%%%%%%% Exercicio 1 %%%%%%%%%%%%%%
+disp("Lista de ajuste de curvas: Exercicio 1");
 disp("Para esse exercicio iremos fazer o ajuste para um conjunto de dados de congelamento de uma substancia.");
 V = [2.65 2.65 2.7 2.7 2.75 2.75 2.85 2.85 2.90 2.90 2.95 2.95 3.00 3.00];
 T = [6.85 6.80 6.70 6.30 6.33 6.20 5.90 5.82 5.80 5.80 6.15 6.00 6.30 6.15];
