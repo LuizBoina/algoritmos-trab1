@@ -2,7 +2,7 @@
 clc
 clear
 disp(' ');
-disp('Introducao ao Calculo Numerico usando o Octave/Matlab'); 
+disp('Primeiro trabalho de Algoritmos Numéricos'); 
 disp('Alunos: Lucas Tabelini Torres & Luiz Felipe Boina');
 disp('Prof. Andrea Valli');
 disp(' ');

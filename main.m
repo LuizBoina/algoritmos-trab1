@@ -3,8 +3,8 @@ clear;
 clear functions;
 %
 % -----------------------------------------------------------
-% 	Introducao ao Calculo Numerico usando o Octave/Matlab		              
-%             Prof. Andrea Valli
+% 	Primeiro trabalho de Algoritmos Numéricos
+%              Prof. Andrea Valli
 %------------------------------------------------------------
 % Descricao do Trabalho 
 % -----------------------------------------------------------
@@ -15,27 +15,27 @@ input('Tecle alguma coisa para continuar...');
 % -----------------------------------------------------------
 % Sistemas Lineares - 1
 % -----------------------------------------------------------
-sl1;
+%sl1;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Sistemas Lineares - 2
 % -----------------------------------------------------------
-sl2;
+%sl2;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Ajuste de Curvas - 1
 % -----------------------------------------------------------
-ac1;
+aj1;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 % -----------------------------------------------------------
 % Ajuste de Curvas - 2
 % -----------------------------------------------------------
-ac2;
+aj2;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %

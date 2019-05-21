@@ -1,9 +1,11 @@
 addpath ('./funcoes')
 clc;
 clear;
+disp('')
+disp('********** Ajuste de curvas - Exercicio 1 **********')
+disp('')
 
 %%%%%%%%%%%%%% Exercicio 1 %%%%%%%%%%%%%%
-disp("Lista de ajuste de curvas: Exercicio 1");
 disp("Para esse exercicio iremos fazer o ajuste para um conjunto de dados de congelamento de uma substancia.");
 V = [2.65 2.65 2.7 2.7 2.75 2.75 2.85 2.85 2.90 2.90 2.95 2.95 3.00 3.00];
 T = [6.85 6.80 6.70 6.30 6.33 6.20 5.90 5.82 5.80 5.80 6.15 6.00 6.30 6.15];
@@ -30,7 +32,7 @@ p6 = polyfit(V,T,6);
 
 %% Tabela de residuo e variancia
 disp('')
-disp('Tabela de residuo e variancia (sigma):')
+disp('Tabela de residuo e variancia (sigma) em funcao do grau do polinomio testado:')
 disp('Grau |   r²   | Sigma');
 printf("  %d  | %.4f | %.4f\n", 1, r2_p1, var_p1);
 printf("  %d  | %.4f | %.4f\n", 2, r2_p2, var_p2);
@@ -40,14 +42,18 @@ printf("  %d  | %.4f | %.4f\n", 5, r2_p5, var_p5);
 printf("  %d  | %.4f | %.4f\n", 6, r2_p6, var_p5);
 
 x = linspace(2.6, 3); % Valores para plotar
-disp('Tempo de congelamento pra 2.8 volumes, com o polinomio de grau 2 (melhor ajuste):')
-disp(polyval(p2, 2.8));
+disp('Tempo de congelamento pra 2.8 volumes, com o polinomio de grau 3 (melhor ajuste, de acordo com a variancia):')
+disp(polyval(p3, 2.8));
 
 %% Plot dos dados e do ajuste
 figure(1)
-plot(V,T,"ro",x,polyval(p2, x),";Polinomio grau 2;")
+plot(V,T,"ro",x,polyval(p3, x),";Polinomio grau 3;")
 xlabel('x'),ylabel('y = f(x)')
-title('Ajuste da curva usando polinomio de grau 2')
+title('Ajuste da curva usando polinomio de grau 3')
 
 disp('Final da questao de ajuste de curvas 1');
-disp('Tecle alguma coisa para continuar...'); pause
+input('Tecle alguma coisa para continuar...');
+
+clc;
+clear;
+close all;
