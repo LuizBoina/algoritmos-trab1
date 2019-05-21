@@ -141,11 +141,19 @@ disp(x2SOR);
 disp(" ");
 disp("Comparando o numero de iteracoes de cada iteracao percebe-se que o metodo Seidel converge mais rapidamente mesmo que o raio espectral do metodo SOR tenho sido menor que o de Seidel.");
 disp(" ");
-input("Aperte para prosseguir para letra c uma vez que nenhum metodo iterativo converge para a terceira matriz.");
+input("Aperte para prosseguir para conclusao uma vez que nenhum metodo iterativo converge para a terceira matriz.");
+
+%%%%%%%%%%%%%% CONCLUSAO LETRA B %%%%%%%%%%%%%%
+clc;
+disp("Apos calcular a solucao para cada metodo iterativo que converge podemos notar que cada metodo chega em uma solucao diferente mas ainda sim dentro da tolerancia desejada.");
+disp("Alem disso cada metodo chega mais rapido a solucao do que outros o que indica que para cada sistema havera um metodo iterativo mais otimizado");
+disp(" ");
+input("Aperte enter para finalizar a letra (b).");
 
 %%%%%%%%%%%%%% LETRA C %%%%%%%%%%%%%%
 clc;
-disp("para a letra (c) iremos plotar um grafico da norma do maximo relatico do residuo pelo numero de iteracoes para cada metodo que converge para as matrizes.");
+disp("para a letra (c) iremos plotar um grafico da norma do maximo relativo do residuo pelo numero de iteracoes para cada metodo que converge para as matrizes.");
+disp(" ");
 input("Aperte enter para plotar o grafico da primeira matriz.");
 
 %%%%%%%%%%%%%% PRIMEIRA MATRIZ %%%%%%%%%%%%%%
@@ -154,7 +162,9 @@ vetIterJacob = linspace(1, iter1Jacob, iter1Jacob);
 vetIterSeidel = linspace(1, iter1Seidel, iter1Seidel);
 vetIterSOR = linspace(1, iter1SOR, iter1SOR);
 plot(vetIterJacob, res1Jacob,";Jacob;",vetIterSeidel, res1Seidel,";Seidel;",vetIterSOR, res1SOR,";SOR;");
-disp("Falar algo a respeito");
+disp("Podemos notar que a norma do maximo relativo do residuo aumenta abruptamente e depois decai, seguindo uma certa oscilacao ate tender a zero chegando a solucao.");
+disp("Tambem cabe dizer que a norma do maximo relativo do residuo decai mais rapidamente para o metodo SOR, seguido do Seidel e Jacobi o que e de se esperar quando analizamos o valor do raio espectral na letra (a).");
+disp(" ");
 input("Aperte enter para plotar o grafico da segunda matriz.");
 
 %%%%%%%%%%%%%% SEGUNDA MATRIZ %%%%%%%%%%%%%%
@@ -163,22 +173,27 @@ close;
 vetIterSeidel = linspace(1, iter2Seidel, iter2Seidel);
 vetIterSOR = linspace(1,iter2SOR, iter2SOR);
 plot(vetIterSeidel, res2Seidel,";Seidel;",vetIterSOR, res2SOR,";SOR;");
-disp("Falar algo a respeito");
+disp("No grafico plotado podemos notar que o metodo de Seidel tem uma pequena vantagem sobre o metodo de SOR.");
+disp(" ");
 input("Aperte enter para apresentar a conclusao.");
 
 %%%%%%%%%%%%%% CONCLUSAO LETRA C %%%%%%%%%%%%%%
 close;
 clc;
 clear;
-disp("conclusao bacana");
-input("Aperte enter para finalizar a questao (c) e iniciar a questao (d)");
+disp("Analizando os graficos para cada metodo podemos concluir que ao passar das iteracoes o residuo vai diminuindo pois estamos chegando proximo da solucao do sistema.");
+%talvez falar sobre a oscilacao
+disp(" ");
+input("Aperte enter para finalizar a questao (c) e iniciar a questao (d).");
 clc;
 
 %%%%%%%%%%%%%% LETRA D %%%%%%%%%%%%%%
 input("Aperte enter para dispor nossa conclusao a respeito dos metodos diretos e iterativos.");
 clc;
-disp("");
+disp("resposta bacana/ler o material.");
+disp(" ");
+input("Aperte enter para finalizar a letra (d).")
 
 %%%%%%%%%%%%%% FIM SISTEMAS LINEARES %%%%%%%%%%%%%%
-disp(" ");
+clc;
 input("Aperte enter finalizar a parte de sistemas lineares.");
