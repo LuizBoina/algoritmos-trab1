@@ -15,14 +15,14 @@ input('Tecle alguma coisa para continuar...');
 % -----------------------------------------------------------
 % Sistemas Lineares - 1
 % -----------------------------------------------------------
-%sl1;
+sl1;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %
 % -----------------------------------------------------------
 % Sistemas Lineares - 2
 % -----------------------------------------------------------
-%sl2;
+sl2;
 disp(' ');
 input('Tecle alguma coisa para continuar...');
 %
