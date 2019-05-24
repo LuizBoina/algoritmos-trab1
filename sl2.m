@@ -12,7 +12,7 @@ disp(" ");
 disp("Para a letra (a) iremos analizar a convergencia dos metodos de Jacobi, Seidel e SOR utilizando diferentes valores de w para tres matrizes diferentes.");
 disp(" ");
 disp("Para tal utilizaremos o teorema que diz que o maior módulo dos autovalores de M deve ser menor que 1.");
-disp("Sendo que para o metodo de Jacobi M = -(D^-1)*(E+F) e para Seidel M = -((E+D)^-1)*F, sendo que o que muda de Seidel para SOR e a presenca de uma constante.");
+disp("Sendo que para o metodo de Jacobi M = -(D^-1)*(E+F) e para Seidel M = -((E+D)^-1)*F, e o que muda de Seidel para SOR, eh que para o primeiro w eh sempre igual a 1.");
 disp(" ");
 input("Pressione enter para analazir a primeira matriz (fs_183_3).");
 
@@ -83,7 +83,7 @@ input("Aperte enter para concluir a questao.");
 %%%%%%%%%%%%%% CONCLUSAO LETRA A %%%%%%%%%%%%%%
 clc;
 disp("Apos os calculos do raio espectral para cada metodo podemos perceber que a primeira matriz converge para todos os metodos, a segunda converge menos para o metodo de Jacobi.");
-disp("Nenhum metodo converge para ultima matriz por mais que variamos o valor de w, logo nao tem como calcular a solucao pelo metodo iterativo");
+disp("Nenhum metodo converge para ultima matriz por mais que variamos o valor de w, logo nao tem como calcular a solucao desse sistema pelo metodo iterativo");
 disp(" ");
 input("Aperte enter para terminar a questao (a)");
 
@@ -106,19 +106,18 @@ disp("Jacobi:");
 disp("solucao = ");
 disp(x1Jacob);
 disp(" ");
-input("Aperte enter para encontrar solucao pelo metodo de Seidel");
+input("Aperte enter para encontrar a solucao pelo metodo de Seidel");
 [x1Seidel,iter1Seidel,res1Seidel] = sor(A,b,10e-6,10e4,1);
 disp("Seidel:");
 disp("solucao = ");
 disp(x1Seidel);
 disp(" ");
-input("Aperte enter para encontrar solucao pelo metodo SOR (w=1.2)");
+input("Aperte enter para encontrar a solucao pelo metodo SOR (w=1.2)");
 [x1SOR,iter1SOR,res1SOR] = sor(A,b,10e-6,10e4,1.2);
 disp("SOR:");
 disp("solucao = ");
 disp(x1SOR);
 disp(" ");
-disp("Comparando o numero de iteracoes de cada iteracao percebe-se que o metodo SOR converge mais rapidamente");
 disp(" ");
 input("Aperte enter para calcular para a proxima matriz.");
 
@@ -135,13 +134,12 @@ disp("Seidel:");
 disp("solucao = ");
 disp(x2Seidel);
 disp(" ");
-input("Aperte enter para encontrar solucao pelo metodo SOR (w=1.2)");
+input("Aperte enter para encontrar a solucao pelo metodo SOR (w=1.2)");
 [x2SOR,iter2SOR,res2SOR] = sor(A,b,10e-6,10e4,1.2);
 disp("SOR:");
 disp("solucao = ");
 disp(x2SOR);
 disp(" ");
-disp("Comparando o numero de iteracoes de cada iteracao percebe-se que o metodo Seidel converge mais rapidamente mesmo que o raio espectral do metodo SOR tenho sido menor que o de Seidel.");
 disp(" ");
 input("Aperte para prosseguir para conclusao uma vez que nenhum metodo iterativo converge para a terceira matriz.");
 
@@ -186,7 +184,6 @@ close;
 clc;
 clear;
 disp("Analizando os graficos para cada metodo podemos concluir que ao passar das iteracoes o residuo vai diminuindo pois estamos chegando proximo da solucao do sistema.");
-%talvez falar sobre a oscilacao
 disp(" ");
 input("Aperte enter para finalizar a questao (c) e iniciar a questao (d).");
 clc;
@@ -194,8 +191,8 @@ clc;
 %%%%%%%%%%%%%% LETRA D %%%%%%%%%%%%%%
 input("Aperte enter para dispor nossa conclusao a respeito dos metodos diretos e iterativos.");
 clc;
-disp("Tanto o metodo direto quanto os metodos iterativos possuem vantagens e desvantagens, para matrizes densas e pequenas o metodo direto possue vantagem uma vez que ao utilizarmos esse metodo encontramos o valor exato rapidamento, a menos de erro de ponto flutuante.");
-disp("Entretanto a complexidade do metodo direto e da ordem de n³ enquanto que dos metodos iterativos é da ordem de n², com isso é mais vantajoso utilizar metodos iterativos para matrizes suficientemente grandes podendo ser esparsas uma vez que armazenamos somente os valores diferentes de zero");
+disp("Tanto o metodo direto quanto os metodos iterativos possuem vantagens e desvantagens, para matrizes densas e pequenas o metodo direto possue vantagem uma vez que ao utilizarmos esse metodo encontramos o valor exato rapidamente, a menos de erro de ponto flutuante.");
+disp("Entretanto a complexidade do metodo direto e da ordem de n³ enquanto que dos metodos iterativos eh da ordem de n², com isso eh mais vantajoso utilizar metodos iterativos para matrizes suficientemente grandes podendo ser esparsas uma vez que armazenamos somente os valores diferentes de zero");
 disp(" ");
 input("Aperte enter para finalizar a letra (d).")
 
