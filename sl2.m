@@ -10,6 +10,7 @@ disp(" ");
 
 %%%%%%%%%%%%%% LETRA A %%%%%%%%%%%%%% 
 disp("Para a letra (a) iremos analizar a convergencia dos metodos de Jacobi, Seidel e SOR utilizando diferentes valores de w para tres matrizes diferentes.");
+disp(" ");
 disp("Para tal utilizaremos o teorema que diz que o maior módulo dos autovalores de M deve ser menor que 1.");
 disp("Sendo que para o metodo de Jacobi M = -(D^-1)*(E+F) e para Seidel M = -((E+D)^-1)*F, sendo que o que muda de Seidel para SOR e a presenca de uma constante.");
 disp(" ");
@@ -89,6 +90,7 @@ input("Aperte enter para terminar a questao (a)");
 %%%%%%%%%%%%%% LETRA B %%%%%%%%%%%%%%
 clc;
 disp("Lista de sistemas lineares: Exercicio 2 letra (b).");
+disp(" ");
 disp("Para esse exercicio iremos calcular a solucao dos sistemas pelos metodos iterativos sabendo que a tolerencia aceitavel eh igual a 10e-6 e o maximo de iteracao igual a 10e4.");
 disp(" ");
 input("Pressione enter para analazir a primeira matriz.");
