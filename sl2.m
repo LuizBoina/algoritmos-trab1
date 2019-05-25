@@ -161,7 +161,7 @@ clc;
 vetIterJacob = linspace(1, iter1Jacob, iter1Jacob);
 vetIterSeidel = linspace(1, iter1Seidel, iter1Seidel);
 vetIterSOR = linspace(1, iter1SOR, iter1SOR);
-plot(vetIterJacob, res1Jacob,";Jacob;",vetIterSeidel, res1Seidel,";Seidel;",vetIterSOR, res1SOR,";SOR;");
+plot(vetIterJacob, res1Jacob,";Jacobi;",vetIterSeidel, res1Seidel,";Seidel;",vetIterSOR, res1SOR,";SOR;");
 title("fs_183_3");
 disp("Podemos notar que a norma do maximo relativo do residuo aumenta abruptamente e depois decai, seguindo uma certa oscilacao ate tender a zero chegando a solucao.");
 disp("Tambem cabe dizer que a norma do maximo relativo do residuo decai mais rapidamente para o metodo SOR, seguido do Seidel e Jacobi o que e de se esperar quando analizamos o valor do raio espectral na letra (a).");

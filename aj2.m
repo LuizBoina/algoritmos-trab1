@@ -3,7 +3,7 @@ clc;
 clear;
 disp('')
 disp('********** Ajuste de curvas - Exercicio 2 **********')
-disp('Nesse exercicio, faremos o ajuste de uma curva que descreve o crescimento de uma bacteria v em funcao da concentracao de oxigenio, utilizando o modelo de Michaelis-Menten.')
+disp('Nesse exercicio, faremos o ajuste de uma curva que descreve o crescimento de uma bacteria v em funcao da concentracao de oxigenio S, utilizando o modelo de Michaelis-Menten.')
 disp('')
 %%%%%%%%%%%%%% Exercicio 2 %%%%%%%%%%%%%% 
 
